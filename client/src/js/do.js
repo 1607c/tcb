@@ -16,6 +16,6 @@ var swiper1 = new Swiper('.swiper-container1', {
     prevButton: '.swiper-button-prev',
     paginationClickable: true,
     spaceBetween: 1,
-    freeMode: true
+    freeMode: true 
 });
 

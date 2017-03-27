@@ -1,6 +1,6 @@
 
 var str = '<ul>';
-$.ajax({
+$.ajax({ 
     url:'http://localhost:3001/',
     dataType:'jsonp',
     method: 'get',
