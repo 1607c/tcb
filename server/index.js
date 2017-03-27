@@ -15,11 +15,51 @@ app.get('/index',function(req,res){
 });
 
 app.get('/',function(req,res){
-    fs.readFile(__dirname + '/public/data.json',function(err,data){
+    fs.readFile(__dirname + '/public/lists.json',function(err,data){
         if(err){
           console.log(err)
         }else {
-          res.json(JSON.parse(data))
+          res.jsonp(JSON.parse(data))
+        }
+    })
+})
+
+app.get('/t',function(req,res){
+    fs.readFile(__dirname + '/public/tlists.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else {
+            res.jsonp(JSON.parse(data))
+        }
+    })
+})
+
+app.get('/hot',function(req,res){
+    fs.readFile(__dirname + '/public/hotlists.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else {
+            res.jsonp(JSON.parse(data))
+        }
+    })
+})
+
+app.get('/brand',function(req,res){
+    fs.readFile(__dirname + '/public/brand.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else {
+            res.jsonp(JSON.parse(data))
+        }
+    })
+})
+
+app.get('/brand/swiper',function (req,res) {
+    fs.readFile(__dirname + '/public/yhst.json',function (err,data) {
+        if (err){
+            console.log(err)
+        }else {
+            res.jsonp(JSON.parse(data))
         }
     })
 })
